@@ -37,5 +37,6 @@ function try_json_decode($json, $assoc = false, $depth = 512, $options = 0)
             );
         }
     }
+    return $return;
 }
 
