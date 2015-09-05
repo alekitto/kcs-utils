@@ -12,7 +12,8 @@
             "Kcs\\Utils\\": "lib/"
         },
         "files": [
-            "lib/functions.php"
+            "lib/functions.php",
+            "lib/array.php"
         ]
     },
     "license": "MIT",

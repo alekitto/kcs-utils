@@ -22,3 +22,20 @@ function try_unserialize($serialized)
     return $unserialized;
 }
 
+function try_json_decode($json, $assoc = false, $depth = 512, $options = 0)
+{
+    json_encode([]); // Reset json_last_error
+    $return = json_decode($json, $assoc, $depth, $options);
+
+    if ($return === null) {
+        $errCode = json_last_error();
+
+        if ($errCode !== JSON_ERROR_NONE) {
+            throw new Exception\JsonDecodeError(
+                "Json decoding failed with message: " .
+                json_last_error_msg() . " (#$errCode)"
+            );
+        }
+    }
+}
+
