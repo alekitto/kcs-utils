@@ -4,8 +4,8 @@ namespace Kcs\Utils;
 
 function is_array_assoc(array $test)
 {
-    $array = array_keys($array);
-    return ($array !== array_keys($array));
+    $test = array_keys($test);
+    return ($test !== array_keys($test));
 }
 
 function object_to_array($object)
