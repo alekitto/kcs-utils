@@ -32,9 +32,12 @@
 
 ;
 var undefined;
+var cookies;
+var extend;
+
 define('cookie-consent', ['utils/extender', 'doc-cookies'], function(extender, cookies) {
 
-    var extend = extender.extend;
+    extend = extender.extend;
 
     /**
      * CookieConsent holds informations about the allowance
