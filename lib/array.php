@@ -34,3 +34,12 @@ function array_to_object($array)
 
     return $array;
 }
+
+function array_first(array $array)
+{
+    if (count($array) < 1) {
+        return null;
+    }
+
+    return array_shift(array_slice($array, 0, 1));
+}
