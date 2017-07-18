@@ -41,5 +41,6 @@ function array_first(array $array)
         return null;
     }
 
-    return array_shift(array_slice($array, 0, 1));
+    $tmp = array_slice($array, 0, 1);
+    return reset($tmp);
 }
